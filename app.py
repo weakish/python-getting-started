@@ -8,6 +8,14 @@ from flask_sockets import Sockets
 
 from views.todos import todos_view
 
+import numpy
+import talib
+
+close = numpy.random.random(100)
+
+print(talib.SMA(close))
+print(talib.get_functions())
+
 app = Flask(__name__)
 sockets = Sockets(app)
 
